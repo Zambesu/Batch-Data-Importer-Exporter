@@ -20,7 +20,7 @@ This project contains a Cobol-based batch program designed to import and export 
 
 ## Installation
 
-1. Clone this repository to your local machine or mainframe environment. ```bash git clone https://github.com/yourusername/batch-data-importer-exporter.git ```
+1. Clone this repository to your local machine or mainframe environment. ```bash git clone https://github.com/yZambesu/batch-data-importer-exporter.git ```
 2. Modify the DB2 connection settings in the `config` section of the Cobol program.
 3. Prepare your input CSV or fixed-width file to match the expected format.
 4. Set up the appropriate JCL scripts to run the batch job.
