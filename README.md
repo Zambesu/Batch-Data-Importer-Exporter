@@ -1,6 +1,7 @@
 # Batch Data Importer/Exporter
 
-## Description This project contains a Cobol-based batch program designed to import and export data between a flat file (CSV or fixed-width) and a DB2 database. The program includes error handling, logging, and basic validation to ensure data integrity during the import/export process.
+## Description
+This project contains a Cobol-based batch program designed to import and export data between a flat file (CSV or fixed-width) and a DB2 database. The program includes error handling, logging, and basic validation to ensure data integrity during the import/export process.
 
 ## Features - **Import Data**: Load data from a CSV or fixed-width flat file into a DB2 table. - **Export Data**: Export data from a DB2 table into a CSV or fixed-width flat file. - **Error Handling**: Logs any errors encountered during the import/export process. - **Data Validation**: Ensures data conforms to the required format before importing it into DB2. - **Logging**: Generates logs for each import/export session, tracking successful records and errors.
 
