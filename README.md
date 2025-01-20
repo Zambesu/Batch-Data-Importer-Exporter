@@ -3,9 +3,18 @@
 ## Description
 This project contains a Cobol-based batch program designed to import and export data between a flat file (CSV or fixed-width) and a DB2 database. The program includes error handling, logging, and basic validation to ensure data integrity during the import/export process.
 
-## Features - **Import Data**: Load data from a CSV or fixed-width flat file into a DB2 table. - **Export Data**: Export data from a DB2 table into a CSV or fixed-width flat file. - **Error Handling**: Logs any errors encountered during the import/export process. - **Data Validation**: Ensures data conforms to the required format before importing it into DB2. - **Logging**: Generates logs for each import/export session, tracking successful records and errors.
+## Features
+- **Import Data**: Load data from a CSV or fixed-width flat file into a DB2 table.
+- **Export Data**: Export data from a DB2 table into a CSV or fixed-width flat file.
+- **Error Handling**: Logs any errors encountered during the import/export process.
+- **Data Validation**: Ensures data conforms to the required format before importing it into DB2.
+- **Logging**: Generates logs for each import/export session, tracking successful records and errors.
 
-## Requirements - **Mainframe Environment**: COBOL, DB2, and JCL support. - **Database**: DB2 (can be adapted to other databases with minor modifications). - **File Format**: Supports CSV and fixed-width formats. - **Tools**: JCL for job control, and a text editor for CSV or fixed-width files.
+## Requirements
+- **Mainframe Environment**: COBOL, DB2, and JCL support.
+- **Database**: DB2 (can be adapted to other databases with minor modifications).
+- **File Format**: Supports CSV and fixed-width formats.
+- **Tools**: JCL for job control, and a text editor for CSV or fixed-width files.
 
 ## Installation 1. Clone this repository to your local machine or mainframe environment. ```bash git clone https://github.com/yourusername/batch-data-importer-exporter.git ``` 2. Modify the DB2 connection settings in the `config` section of the Cobol program. 3. Prepare your input CSV or fixed-width file to match the expected format. 4. Set up the appropriate JCL scripts to run the batch job.
 
