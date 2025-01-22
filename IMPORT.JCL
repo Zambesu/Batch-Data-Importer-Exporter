@@ -11,7 +11,7 @@
 //SYS00A   EXEC PGM=SYS000,
 //         PARM='DMP.&USERID..D&DATE..DMP0001.OUTPUT'
 //*--------------------------------------------------------------------*
-//DMP0001  EXEC PGM=DMP0001,PARM='&DMPPARM'
+//DMP0001  EXEC PGM=DMPP0001,PARM='&DMPPARM'
 //SYSOUT   DD   SYSOUT=*
 //*--------------------------------------------------------------------*
 //DMP0001I DD DSN='DMP.&USERID..D&DATE..DMP0001.INPUT',
