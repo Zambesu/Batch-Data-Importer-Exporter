@@ -230,10 +230,6 @@
                 CONTINUE
            END-EVALUATE.
       *
-           IF SQLCODE                  EQUAL 0
-              PERFORM 330000-WRITE-OUTPUT
-           END-IF.
-      *
            EXEC SQL
               CLOSE DB2CURSOR
            END-EXEC.
