@@ -1,5 +1,5 @@
       *----------------------------------------------------------------*
-      * PROGRAM..: DMP0001
+      * PROGRAM..: DMPP0001
       * AUTHOR...: MATEUS RIBEIRO
       * DATE.....: 19\01\2025
       * PURPOSE..: TO IMPORT OR EXPORT DATA BETWEEN A FILE (CSV OR FIXED
@@ -99,15 +99,10 @@
       *
        01  DMP-TABLE-REGISTER.
            03 TB_CLIENT_ID             PIC 9(004).
-           03 FILLER                   PIC X(001)     VALUE ','.
            03 TB_NAME                  PIC X(020).
-           03 FILLER                   PIC X(001)     VALUE ','.
            03 TB_EMAIL                 PIC X(030).
-           03 FILLER                   PIC X(001)     VALUE ','.
            03 TB_PHONE                 PIC 9(008).
-           03 FILLER                   PIC X(001)     VALUE ','.
            03 TB_ACC_TYPE              PIC 9(002).
-           03 FILLER                   PIC X(001)     VALUE ','.
            03 TB_ACC_BALANCE           PIC 9(015)V99.
       *
       *----------------------------------------------------------------*
@@ -137,7 +132,7 @@
            PERFORM 200000-PROCESSING.
            PERFORM 800000-FINALIZATION.
       *
-       000099-END-MAIN-PROCEDURE.
+       000099-END-MAIN-ROUTINE.
            STOP RUN.
       *
       *---------------------------------------*
