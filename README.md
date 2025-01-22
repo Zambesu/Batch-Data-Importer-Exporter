@@ -21,8 +21,9 @@ This project contains a Cobol-based batch program designed to import and export 
 ## Installation
 
 1. Clone this repository to your local machine or mainframe environment. ```bash git clone https://github.com/yZambesu/batch-data-importer-exporter.git ```
-2. Change the EXEC SQL instructions and the file structure to match your input file and database table .
-3. Compile the program using the COMPILE.JCL job
+2. Change the EXEC SQL instructions and the file structure in the program to match your input file and database table .
+3. Chanege the INPUTLIB symbolic in the COMPILE.JCL job to the dataset where the Cobol program is saved
+4. Compile the program using the COMPILE.JCL job
 
 ## Usage
 
