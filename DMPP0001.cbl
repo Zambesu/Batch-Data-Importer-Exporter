@@ -31,8 +31,8 @@
       *----------------------------------------------------------------*
        FILE-CONTROL.
       *
-           SELECT DMP0001I ASSIGN TO 'DMP0001I.CSV'.
-           SELECT DMP0001O ASSIGN TO 'DMP0001O.CSV'.
+           SELECT DMP0001I ASSIGN TO  UT-S-DMP0001I.
+           SELECT DMP0001O ASSIGN TO  UT-S-DMP0001O.
       *----------------------------------------------------------------*
       *
       ******************************************************************
@@ -61,6 +61,10 @@
       *
       *------------------- P L A C E H O L D E R S --------------------*
       *
+       77  PLCH-CURR-DATE              PIC 9(008)     VALUE ZEROS.
+           03 PLCH-DATE-YYYY           PIC 9(002)     VALUE ZEROS.
+           03 PLCH-DATE-MM             PIC 9(002)     VALUE ZEROS.
+           03 PLCH-DATE-DD             PIC 9(002)     VALUE ZEROS.
       *
       *-------------------------- F L A G S ---------------------------*
       *
@@ -140,6 +144,22 @@
        100000-START                    SECTION.
       *---------------------------------------*
       *
+           ACCEPT PLCH-CURR-DATE       FROM DATE YYYYMMDD
+      *
+           DISPLAY '***************************************************'
+           DISPLAY '*** DMP0001 - STARTING EXECUTION'
+           DISPLAY '*** CURRENT DATE...: '
+           PLCH-DATE-MM '/' PLCH-DATE-DD '/' PLCH-DATE-YYYY.
+      *
+           IF DMP-FLAG                 EQUAL 1
+              DISPLAY '*** DATA EXPORT ***'
+           ELSE
+              IF DMP-FLAG              EQUAL 2
+                 DISPLAY '*** DATA IMPORT ***'
+              ELSE
+                 PERFORM 999001-ERROR-001
+              END-IF
+           END-IF.
       *
        100099-END-START.
            EXIT.
@@ -234,12 +254,12 @@
            NUMERIC                      BY ZEROS
            ALPHANUMERIC                 BY SPACES.
       *
-           MOVE TB_CLIENT_ID        TO DMP-CLIENT-ID
-           MOVE TB_NAME             TO DMP-NAME
-           MOVE TB_EMAIL            TO DMP-EMAIL
-           MOVE TB_PHONE            TO DMP-PHONE
-           MOVE TB_ACC_TYPE         TO DMP-ACC-TYPE
-           MOVE TB_ACC_BALANCE      TO DMP-ACC-BALANCE
+           MOVE TB_CLIENT_ID           TO DMP-CLIENT-ID
+           MOVE TB_NAME                TO DMP-NAME
+           MOVE TB_EMAIL               TO DMP-EMAIL
+           MOVE TB_PHONE               TO DMP-PHONE
+           MOVE TB_ACC_TYPE            TO DMP-ACC-TYPE
+           MOVE TB_ACC_BALANCE         TO DMP-ACC-BALANCE
       *
            WRITE DMP0001O-FD FROM DMP-FILE-REGISTER.
       *
