@@ -16,37 +16,24 @@ This project contains a Cobol-based batch program designed to import and export 
 - **Mainframe Environment**: COBOL, DB2, and JCL support.
 - **Database**: DB2 (can be adapted to other databases with minor modifications).
 - **File Format**: Supports CSV and fixed-width formats.
-- **Tools**: JCL for job control, and a text editor for CSV or fixed-width files.
+- **Tools**: JCL for job control.
 
 ## Installation
 
 1. Clone this repository to your local machine or mainframe environment. ```bash git clone https://github.com/yZambesu/batch-data-importer-exporter.git ```
-2. Modify the DB2 connection settings in the `config` section of the Cobol program.
-3. Prepare your input CSV or fixed-width file to match the expected format.
-4. Set up the appropriate JCL scripts to run the batch job.
+2. Change the EXEC SQL instructions and the file structure to match your input file and database table .
+3. Compile the program using the COMPILE.JCL job
 
 ## Usage
 
 1. **To Import Data**:
-   - Use the following JCL to execute the Cobol program that imports data from the flat file into DB2.
-   - Place the input file in the appropriate directory.
-   - Execute the batch job.
+   - Load the input file to the mainframe before execution.
+   - Change the IMPORT.JCL job to match your filename, UserID, current date and the propper LRECL and space alocations, according to your Input file and database table
+   - Use the IMPORT.JCL job to execute the Cobol program with the propper parameters to insert the data into the database table.
 
 3. **To Export Data**:
-   - Use a separate JCL script to export data from DB2 to a flat file.
-   - Set up the output file location.
-   - Run the batch job to export the data.
-
-## Example CSV Format
-- **Input File (CSV)**: ```csv ID,Name,Amount 1,John Doe,1000 2,Jane Smith,1500 ```
-- **Output File (CSV)**: ```csv ID,Name,Amount 1,John Doe,1000 2,Jane Smith,1500 ```
-
-## Configuration
-
-The Cobol program uses configuration settings to connect to DB2 and specify file paths.
-
-- **DB2 Connection String**: Modify the connection string in the Cobol code for your DB2 instance.
-- **File Paths**: Update the input/output file paths in the program.
+   - Change the EXPORT.JCL job to set the current date and your UserID
+   - Run the EXPORT.JCL job to export the data from the database table.
 
 ## License
 This project is licensed under the GNU GENERAL PUBLIC LICENSE License - see the [LICENSE](LICENSE) file for details.
