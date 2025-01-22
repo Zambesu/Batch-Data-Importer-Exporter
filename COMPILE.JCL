@@ -1,4 +1,4 @@
-//JOB0001  JOB 'BATCH DATA IMPORT',
+//JOB0001  JOB 'COMPILE DMPP0001',
 //         ROS.GITHUB.MATEUS.R,REGION=0M,MSGCLASS=R,
 //         COND=((08,EQ),(12,EQ),(16,EQ),(888,EQ)),
 //*        TYPRUN=SCAN,                         * JCL TEST.
