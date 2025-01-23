@@ -372,7 +372,7 @@
            DISPLAY 'EXPECTED..........: 1 OR 2'.
            MOVE 1                      TO RETURN-CODE.
            DISPLAY 'RETURN-CODE.......: ' RETURN-CODE.
-           GO TO 000099-END-MAIN-PROCEDURE.
+           GO TO 000099-END-MAIN-ROUTINE.
       *
        999002-ERROR-002.
       *
@@ -380,7 +380,7 @@
            DISPLAY 'ERROR 002 - INPUT FILE IS EMPTY.'.
            MOVE 2                      TO RETURN-CODE.
            DISPLAY 'RETURN-CODE....: ' RETURN-CODE.
-           GO TO 000099-END-MAIN-PROCEDURE.
+           GO TO 000099-END-MAIN-ROUTINE.
       *
        999003-ERROR-003.
       *
@@ -394,7 +394,7 @@
            DISPLAY 'DMP-ACC-TYPE......: ' DMP-ACC-TYPE
            DISPLAY 'DMP-ACC-BALANCE...: ' DMP-ACC-BALANCE
            MOVE 3                      TO RETURN-CODE.
-           GO TO 000099-END-MAIN-PROCEDURE.
+           GO TO 000099-END-MAIN-ROUTINE.
       *
        999004-ERROR-004.
       *
@@ -402,7 +402,7 @@
            DISPLAY 'ERROR 004 - FAILED TO SELECT DATA FROM TABLE'
            DISPLAY 'SQLCODE....: ' SQLCODE
            MOVE 4                      TO RETURN-CODE
-           GO TO 000099-END-MAIN-PROCEDURE.
+           GO TO 000099-END-MAIN-ROUTINE.
       *
        999005-ERROR-005.
       *
