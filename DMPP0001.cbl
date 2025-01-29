@@ -3,7 +3,7 @@
       * AUTHOR...: MATEUS RIBEIRO
       * DATE.....: 19\01\2025
       * PURPOSE..: TO IMPORT OR EXPORT DATA BETWEEN A FILE (CSV OR FIXED
-      * -          WIDTH) AND A DB2 DATABASE (CAN BE ADAPTED TO OTHER
+      *            WIDTH) AND A DB2 DATABASE (CAN BE ADAPTED TO OTHER
       *            DATABASES WITH MINOR MODIFICATIONS).
       *----------------------------------------------------------------*
       * VERSION..: VRS0001 - IMPLEMENTATION.
