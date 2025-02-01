@@ -77,7 +77,7 @@
        77  CNT-READ-INPUT              PIC 9(017)     VALUE ZEROS.
        77  CNT-WRITE-OUTPUT            PIC 9(017)     VALUE ZEROS.
        77  CNT-UNLO-TABLE              PIC 9(017)     VALUE ZEROS.
-       77  CNT-WRIT-OUTPUT             PIC 9(017)     VALUE ZEROS.
+       77  CNT-WRITE-OUTPUT            PIC 9(017)     VALUE ZEROS.
       *
       *----------------- F I L E - S T R U C T U R E S ----------------*
       *
